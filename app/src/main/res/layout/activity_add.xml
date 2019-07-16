@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Add">
+
+    <TextView
+            android:text="@string/to_do_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.313"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"/>
+
+    <TextView
+            android:text="@string/due_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintHorizontal_bias="0.0"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.112"/>
+
+    <TextView
+            android:text="@string/category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView3"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintHorizontal_bias="0.0"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView2"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.112"/>
+
+    <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="textShortMessage"
+            android:ems="10"
+            android:id="@+id/getDesc"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView"
+            android:autofillHints="@string/app_name"
+            android:hint="@string/app_name"
+            app:layout_constraintEnd_toStartOf="@+id/guideline3"
+            app:layout_constraintStart_toStartOf="@+id/guideline4"/>
+
+    <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="date"
+            android:ems="10"
+            android:id="@+id/getDate"
+            android:autofillHints="@string/do_b4"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView2"
+            android:hint="@string/date_fm"
+            app:layout_constraintStart_toStartOf="@+id/guideline4"
+            app:layout_constraintEnd_toStartOf="@+id/guideline3"/>
+
+    <Spinner
+            android:layout_width="0dp"
+            android:layout_height="33dp"
+            android:id="@+id/spinner"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/getDate"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintVertical_bias="0.052"
+            android:entries="@array/categories_array"
+            app:layout_constraintStart_toStartOf="@+id/guideline4"
+            app:layout_constraintEnd_toStartOf="@+id/guideline3"/>
+
+    <Button
+            android:text="@string/add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/spinner"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintVertical_bias="0.202"
+            android:onClick="addClicked"
+            app:layout_constraintEnd_toStartOf="@+id/guideline3"/>
+
+    <androidx.constraintlayout.widget.Guideline
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/guideline"
+            app:layout_constraintGuide_percent="0.15"/>
+
+    <androidx.constraintlayout.widget.Guideline
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/guideline3"
+            app:layout_constraintGuide_percent="0.9"/>
+
+    <androidx.constraintlayout.widget.Guideline
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/guideline4"
+            app:layout_constraintGuide_percent="0.4"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

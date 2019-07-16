@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="categories_array">
+        <item>Contact someone</item>
+        <item>Fix something</item>
+        <item>Go somewhere</item>
+        <item>Travel preparations</item>
+        <item>Work related</item>
+        <item>Look-up something</item>
+        <item>Practice a skill</item>
+        <item>Undefined</item>
+    </string-array>
+</resources>

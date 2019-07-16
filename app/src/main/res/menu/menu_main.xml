@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context="com.example.to_do.MainActivity">
+    <item
+            android:title="@string/action_grp_cat"
+            android:id="@+id/action_group_cat"/>
+    <item
+            android:id="@+id/action_sort_date"
+            android:title="@string/action_sort_date"
+            />
+    <item
+            android:title="@string/action_sort_todo"
+            android:id="@+id/action_sort_todo"/>
+
+</menu>
